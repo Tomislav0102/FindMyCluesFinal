@@ -3,16 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using DG.Tweening;
+using UnityEditor;
+using UnityEngine.SceneManagement;
 
 public class test : MonoBehaviour
 {
-    public LayerMask mask;
 
-    private void Awake()
-    {
-        gameObject.layer = mask;
-    }
+
+
 }
+
+
 
 
 

@@ -62,11 +62,16 @@ public class ExperienceManager : MonoBehaviour, IActivation
             for (int i = 0; i < locations.Length; i++)
             {
                 if (_locationTransforms[i].TryGetComponent(out MeshRenderer mesh)) mesh.enabled = false;
-                PlaceAtLocation.AddPlaceAtComponent(_locationTransforms[i].gameObject, locations[i].Location, Utilities.Opt());
+                if(!gm.testLocations) PlaceAtLocation.AddPlaceAtComponent(_locationTransforms[i].gameObject, locations[i].Location, Utilities.Opt());
+                //else
+                //{
+                //    _locationTransforms[i].position = Utilities.HorPos(gm.camTr.position);
+                //}
             }
         }
 
         yield return new WaitForSeconds(gm.build ? 3f : 0.1f);
+        if (gm.testLocations) parLocations.position = Utilities.HorPos(gm.camTr.position + 4f * gm.camTr.forward);
         IsActive = true;
 
     }
@@ -76,6 +81,7 @@ public class ExperienceManager : MonoBehaviour, IActivation
     }
     private void Update()
     {
+
         if (!IsActive || currentLocation == null)  return;
 
         float remainDisLocation = Vector3.Distance(Utilities.HorPos(gm.camTr.position), Utilities.HorPos(currentLocation.myTransform.position));
@@ -130,17 +136,5 @@ public class ExperienceManager : MonoBehaviour, IActivation
     }
     public void ResetDistance() => MinMaxDistance = _defaultDistance;
 
-    public void TrackingStarted()
-    {
-        IsTracking = true;
-    }
-    public void TrackingLost()
-    {
-        IsTracking = false;
-    }
-    public void TrackingRestored()
-    {
-        IsTracking = true;
-    }
 
 }

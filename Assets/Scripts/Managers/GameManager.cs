@@ -5,6 +5,7 @@ using UnityEngine.UI;
 using TMPro;
 using ARLocation;
 using DG.Tweening;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -28,6 +29,15 @@ public class GameManager : MonoBehaviour
     public bool usePlayerPrefs;
     public static Lang Language;
     [HideInInspector] public bool gameEnd;
+
+    [Header("Testing")]
+    public bool testLocations;
+    public string nameOfMainScene;
+    public void ReturnToMainScene()
+    {
+        SceneManager.LoadScene(nameOfMainScene);
+    }
+
     private void Awake()
     {
         Instance = this;
