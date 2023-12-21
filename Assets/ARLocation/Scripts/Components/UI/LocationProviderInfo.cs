@@ -8,29 +8,29 @@ namespace ARLocation.UI
 
     public class LocationProviderInfo : MonoBehaviour
     {
-        private List<Text> texts = new List<Text>();
+        [SerializeField] List<Text> texts = new List<Text>();
         private ARLocationProvider locationProvider;
-        private LoadingBar accuracyBar;
-        private Transform mainCameraTransform;
+        [SerializeField] LoadingBar accuracyBar;
+        [SerializeField] Transform mainCameraTransform;
 
         // Use this for initialization
         void Start()
         {
-            texts.Add(GameObject.Find(gameObject.name + "/Panel/Canvas/Provider").GetComponent<Text>());
-            texts.Add(GameObject.Find(gameObject.name + "/Panel/Canvas/Latitude").GetComponent<Text>());
-            texts.Add(GameObject.Find(gameObject.name + "/Panel/Canvas/Longitude").GetComponent<Text>());
-            texts.Add(GameObject.Find(gameObject.name + "/Panel/Canvas/Altitude").GetComponent<Text>());
-            texts.Add(GameObject.Find(gameObject.name + "/Panel/Canvas/Time").GetComponent<Text>());
-            texts.Add(GameObject.Find(gameObject.name + "/Panel/Canvas/Status").GetComponent<Text>());
-            texts.Add(GameObject.Find(gameObject.name + "/Panel/Canvas Right/DistanceWalked").GetComponent<Text>());
-            texts.Add(GameObject.Find(gameObject.name + "/Panel/Canvas Right/CameraPosition").GetComponent<Text>());
-            texts.Add(GameObject.Find(gameObject.name + "/Panel/Canvas Right/MagneticSensor").GetComponent<Text>());
+            //texts.Add(GameObject.Find(gameObject.name + "/Panel/Canvas/Provider").GetComponent<Text>());
+            //texts.Add(GameObject.Find(gameObject.name + "/Panel/Canvas/Latitude").GetComponent<Text>());
+            //texts.Add(GameObject.Find(gameObject.name + "/Panel/Canvas/Longitude").GetComponent<Text>());
+            //texts.Add(GameObject.Find(gameObject.name + "/Panel/Canvas/Altitude").GetComponent<Text>());
+            //texts.Add(GameObject.Find(gameObject.name + "/Panel/Canvas/Time").GetComponent<Text>());
+            //texts.Add(GameObject.Find(gameObject.name + "/Panel/Canvas/Status").GetComponent<Text>());
+            //texts.Add(GameObject.Find(gameObject.name + "/Panel/Canvas Right/DistanceWalked").GetComponent<Text>());
+            //texts.Add(GameObject.Find(gameObject.name + "/Panel/Canvas Right/CameraPosition").GetComponent<Text>());
+            //texts.Add(GameObject.Find(gameObject.name + "/Panel/Canvas Right/MagneticSensor").GetComponent<Text>());
 
             locationProvider = ARLocationProvider.Instance;
 
-            accuracyBar = GameObject.Find(gameObject.name + "/Panel/Canvas/LoadingBar").GetComponent<LoadingBar>();
+            //accuracyBar = GameObject.Find(gameObject.name + "/Panel/Canvas/LoadingBar").GetComponent<LoadingBar>();
 
-            mainCameraTransform = ARLocationManager.Instance.MainCamera.transform;
+            //mainCameraTransform = ARLocationManager.Instance.MainCamera.transform;
         }
 
         // Update is called once per frame
