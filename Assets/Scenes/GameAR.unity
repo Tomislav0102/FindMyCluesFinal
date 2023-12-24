@@ -985,7 +985,7 @@ GameObject:
   - component: {fileID: 94721219}
   m_Layer: 0
   m_Name: Spawn point
-  m_TagString: Untagged
+  m_TagString: SpawnPoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2695,7 +2695,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 3750457233369436710}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &548806674 stripped
@@ -3789,7 +3790,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &728112963
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4786,7 +4787,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &826877926
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4838,8 +4839,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 3750457233369436710}
+  m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &863111033
@@ -4888,7 +4888,7 @@ MonoBehaviour:
   parLocations: {fileID: 3750457233369436710}
   locationMileStones: []
   IsTracking: 1
-  currentLocation: {fileID: 9023680084209359665}
+  currentLocation: {fileID: 7773417018935359564}
 --- !u!4 &863111035
 Transform:
   m_ObjectHideFlags: 0
@@ -6873,7 +6873,7 @@ GameObject:
   - component: {fileID: 1109387976}
   m_Layer: 0
   m_Name: Spawn point
-  m_TagString: Untagged
+  m_TagString: SpawnPoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11878,7 +11878,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1799864709
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12526,7 +12526,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20077e17dae2624419c05f7640fb68ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  build: 1
+  build: 0
   fadeInImage: {fileID: 1627483368}
   arObjects:
   - {fileID: 1809471766479369}
@@ -13259,7 +13259,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4893691671332985
 Transform:
   m_ObjectHideFlags: 0
@@ -13789,7 +13789,7 @@ Transform:
   - {fileID: 1283441767}
   - {fileID: 7058804331769099200}
   - {fileID: 2064262103}
-  m_Father: {fileID: 826877927}
+  m_Father: {fileID: 516163880}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &3865552715986934400
 MonoBehaviour:
@@ -13851,7 +13851,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &4288181525590005449
 GameObject:
   m_ObjectHideFlags: 0
